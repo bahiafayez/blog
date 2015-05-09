@@ -12,7 +12,17 @@ if (process.env.OPENSHIFT_MYSQL_DB_HOST != undefined) {
         // Configure your URL and mail settings here
         production: {
             url: 'http://'+process.env.OPENSHIFT_APP_DNS,
-            mail: {},
+            mail: {
+                transport: 'SMTP',
+                    options: {
+                        host: 'smtp.mailgun.org',
+                        service: 'Mailgun',
+                        auth: {
+                            user: 'postmaster@sandbox5ca629f602a34402bf6ce50209905fad.mailgun.org',
+                            pass: '3d4b29a57bd11838217793a2b04d2c91'
+                        }
+                    }
+            },
             database: {
                 client: 'mysql',
                 connection: {
@@ -42,7 +52,17 @@ if (process.env.OPENSHIFT_MYSQL_DB_HOST != undefined) {
         // Configure your URL and mail settings here
         production: {
             url: 'http://'+process.env.OPENSHIFT_APP_DNS,
-            mail: {},
+            mail: {
+                transport: 'SMTP',
+                    options: {
+                        host: 'smtp.mailgun.org',
+                        service: 'Mailgun',
+                        auth: {
+                            user: 'postmaster@sandbox5ca629f602a34402bf6ce50209905fad.mailgun.org',
+                            pass: '3d4b29a57bd11838217793a2b04d2c91'
+                        }
+                    }
+            },
             database: {
                 client: 'pg',
                 connection: {
@@ -110,7 +130,17 @@ if (process.env.OPENSHIFT_MYSQL_DB_HOST != undefined) {
         // Configure your URL and mail settings here
         production: {
             url: 'http://'+process.env.OPENSHIFT_APP_DNS,
-            mail: {},
+            mail: {
+                transport: 'SMTP',
+                    options: {
+                        host: 'smtp.mailgun.org',
+                        service: 'Mailgun',
+                        auth: {
+                            user: 'postmaster@sandbox5ca629f602a34402bf6ce50209905fad.mailgun.org',
+                            pass: '3d4b29a57bd11838217793a2b04d2c91'
+                        }
+                    }
+            },
             database: {
                 client: 'sqlite3',
                 connection: {
